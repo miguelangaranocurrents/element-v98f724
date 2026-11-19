@@ -138,6 +138,10 @@ $left-gutter: 64px;
         background-color: inherit;
         color: inherit; /* inherit the colour from the dark or light theme by default (but not for code blocks) */
         flex: 1;
+        /* As a flex item (e.g. of the edited-message annotation wrapper) this must be allowed to
+           shrink below the min-content width of a wide <pre>, otherwise the whole message is pushed
+           out of the viewport instead of the code block scrolling within it. */
+        min-width: 0;
 
         pre,
         code {

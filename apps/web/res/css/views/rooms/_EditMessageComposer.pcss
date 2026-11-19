@@ -42,3 +42,10 @@ Please see LICENSE files in the repository root for full details.
         }
     }
 }
+
+/* The wrapper groups the URL preview with the editor inside the tile's body
+   slot. The slot shell clips its children (to trap Zalgos), but the
+   autocomplete popup opens above the composer and must not be clipped. */
+.mx_EventTile .mx_EditMessageComposerWrapper {
+    overflow: visible;
+}
